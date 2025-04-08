@@ -1,0 +1,22 @@
+Workspace: Pokémon API
+Collection:
+- GET /pokemon
+  Params: page, limit, type
+  Response: 
+    {
+      "data": Array<Pokemon>,
+      "pagination": {
+        "currentPage": Number,
+        "totalPages": Number
+      }
+    }
+
+- GET /pokemon/:id
+  Response:
+    {
+      "id": Number,
+      "name": String,
+      "types": Array<String>,
+      "image": String,
+      "stats": Object
+    }
